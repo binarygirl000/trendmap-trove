@@ -34,5 +34,18 @@ export function useTheme() {
     };
   }, []);
 
-  return { isDark };
+  const toggleTheme = () => {
+    const newTheme = isDark ? 'light' : 'dark';
+    localStorage.theme = newTheme;
+    
+    if (newTheme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+    
+    setIsDark(!isDark);
+  };
+
+  return { isDark, toggleTheme };
 }

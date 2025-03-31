@@ -42,6 +42,9 @@ const App = () => {
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
+        <footer className="fixed bottom-0 right-0 p-4 text-xs text-muted-foreground">
+          Created by Yashasvi
+        </footer>
       </TooltipProvider>
     </QueryClientProvider>
   );
